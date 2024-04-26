@@ -13,7 +13,9 @@ export const uploadImage = (data) => {
     type: file.type,
   };
 
-  const storageRef = ref(storage, "images/" + file.name);
+  const time = new Date();
+
+  const storageRef = ref(storage, "images/" + time.getTime() + "-" + file.name);
   const uploadTask = uploadBytesResumable(storageRef, file, metadata);
 
   uploadTask.on(

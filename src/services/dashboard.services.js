@@ -4,6 +4,7 @@ import { db } from "../firebaseConfig/firebase.config";
 export const deleteData = async (pid) => {
   await remove(ref(db, "products/" + pid))
     .then(() => alert("Product Deleted"))
+    .then(() => window.location.reload())
     .catch((error) => console.log(error));
 };
 

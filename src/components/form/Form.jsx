@@ -1,7 +1,10 @@
 import { useForm } from "react-hook-form";
 import { onSubmit } from "../../pages/dashboard/addProduct/AddProduct";
+import { useState } from "react";
 
-const Form = (props) => {
+const Form = () => {
+  const [pointer, setPointer] = useState(false);
+
   const {
     register,
     handleSubmit,
@@ -27,6 +30,13 @@ const Form = (props) => {
         {...register("price", { required: true })}
       />
       {errors.price && <span>required</span>}
+      <input
+        type="number"
+        placeholder="Discount"
+        className="input input-bordered w-full max-w-xs"
+        {...register("discount", { required: true })}
+      />
+      {errors.discount && <span>required</span>}
       <input
         type="number"
         placeholder="Quantity"

@@ -11,6 +11,7 @@ const CardDetails = (props) => {
         <p>{desc}</p>
         <p>Price: {price}</p>
         <p>Quantity: {qty}</p>
+        <button className="btn btn-primary">Buy Now</button>
       </div>
     </div>
   );

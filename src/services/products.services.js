@@ -12,7 +12,7 @@ export const getAllProducts = async () => {
       return Object.values(data);
     }
   } catch (error) {
-    console.log("error");
+    alert("error", error);
   }
 };
 
@@ -27,9 +27,11 @@ export const addProduct = async (data, img) => {
       ...data,
     });
 
+    alert("Product Added");
+
     return response;
   } catch (error) {
-    console.error("Error", error);
+    alert("Error", error);
   }
 };
 

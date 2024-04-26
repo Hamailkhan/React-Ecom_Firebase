@@ -58,7 +58,7 @@ const Nav = () => {
               </a>
             </li>
             <li>
-              <a>Settings</a>
+              <NavLink to="/dashboard">Dashboard</NavLink>
             </li>
             <li>
               <a>Logout</a>
